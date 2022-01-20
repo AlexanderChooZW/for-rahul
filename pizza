@@ -1,0 +1,62 @@
+pizza ={
+    'crust':[],
+    'toppings':[],
+    'sauce':[]
+}
+
+Crust_types_available_2022=['thin','new york','thick']
+toppings_available_2022=['anchovies','pepperoni','cheese','mushrooms']
+sauces_available_2022=['tomato','organic','vegan','omega 3']
+
+customers_choices_first=[]
+customers_choices_confirmed=[]
+customers_crust=input("Hi! I am going to take your order. I am going to start with the crust. Today we only have New york crust, Thin crust, or thick crust. Which would you like?")
+if customers_crust in Crust_types_available_2022:
+    print("Are you sure?")
+    if input().lower()=="yes":
+            print("hell yeah boi ill lock that in")
+            customers_choices_confirmed.append(customers_crust)
+else:
+    print("Fam. did you not read the crusts we have fam?")
+
+
+customers_toppings=input("Now I am going to need your toppings. Today we have Anchovies, pepperoni, cheese, mushrooms. You can choose 2 toppings for your pizza. What would you like?")
+if customers_toppings in toppings_available_2022:
+    print("Are you sure?")
+    if input().lower()=="yes":
+            print("hell yeah boi ill lock that in")
+            customers_choices_confirmed.append(customers_toppings)
+else:
+    print("Fam. did you not read the toppings we have fam?")
+customers_toppings2=input("Now your second topping")
+if customers_toppings in toppings_available_2022:
+    print("Are you sure?")
+    if input().lower()=="yes":
+            print("hell yeah boi ill lock that in")
+            customers_choices_confirmed.append(customers_toppings2)
+else:
+    print("Fam. did you not read the toppings we have fam?")
+
+customers_sauce=input("Now I am going to need your sauce. We have tomato, organic, vegan or Omega 3.  What would you like?")
+if customers_sauce in sauces_available_2022:
+    print("Are you sure?")
+    if input().lower()=="yes":
+            print("hell yeah boi ill lock that in")
+            customers_choices_confirmed.append(customers_sauce)
+    else:
+        print("Donut. Restart the program")
+else:
+    print("Fam. did you not read the sauce we have fam?")
+
+for confirmed_choice in customers_choices_confirmed:
+    if confirmed_choice=='thin'or 'new york'or'thick':
+        pizza['crust'].append(confirmed_choice)
+
+
+
+
+
+
+
+
+
